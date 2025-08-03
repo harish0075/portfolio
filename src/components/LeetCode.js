@@ -17,13 +17,14 @@ export default function LeetCode() {
     fetch(`https://leetcode-stats-api.herokuapp.com/${username}`)
       .then((res) => res.json())
       .then((data) => {
+        console.log(data);
         if (!data?.status || data.status === "success") setStats(data);
       })
       .catch((err) => console.error("LeetCode fetch error:", err));
 
     setTimeout(() => setFadeIn(true), 300);
   }, []);
-
+  
   const solved = stats?.totalSolved ?? 0;
   const total =
     LEETCODE_TOTALS.easy + LEETCODE_TOTALS.medium + LEETCODE_TOTALS.hard;

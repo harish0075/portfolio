@@ -54,11 +54,11 @@ export default function Hero() {
           <div className="max-w-md text-left whitespace-pre-line text-2xl leading-relaxed text-white font-bold">
             <TrueFocus
               sentence={combinedSentence}
-              manualMode={false}
+              manualMode={true}
               blurAmount={5}
               borderColor="red"
-              animationDuration={2}
-              pauseBetweenAnimations={1}
+              animationDuration={1}
+              pauseBetweenAnimations={0}
             />
           </div>
         </div>
